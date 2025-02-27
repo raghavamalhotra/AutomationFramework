@@ -3,14 +3,11 @@ package Page;
 import TestData.AccountDetails;
 import Utilities.BrowserDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
-import java.util.concurrent.BrokenBarrierException;
 
 public class SignIn extends BrowserDriver {
 
@@ -35,6 +32,6 @@ public class SignIn extends BrowserDriver {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Welcome)));
         Assert.assertTrue(driver.findElement(By.xpath(Welcome)).isDisplayed());
-        System.out.println("Sign In successful");
+        System.out.println("Sign In was successful");
     }
 }
